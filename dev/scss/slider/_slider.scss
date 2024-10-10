@@ -1,0 +1,60 @@
+@use "../wrapper";
+@use "../variables.scss" as vars;
+
+.slider {
+  margin-top: 50px;
+
+  &-card {
+    border-radius: 12px;
+    background-color: vars.$bgTertiaryColor;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &-img-cont {
+      img {
+        @include vars.imgInCont(500px);
+      }
+    }
+
+    &-content-cont {
+      padding: 30px;
+    }
+
+    p:first-of-type {
+      @include vars.h4-regular;
+      color: vars.$textQuaternaryColor;
+      margin-bottom: 6px;
+    }
+
+    p:last-of-type {
+      @include vars.pSmall;
+      color: vars.$textQuaternaryColor;
+    }
+  }
+
+  &-buttons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    button {
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      border: transparent;
+      background-color: vars.$detailsSliderColor;
+    }
+
+    .active {
+      background-color: vars.$detailsActiveColor;
+    }
+  }
+}
+
+@import "slider-tablet-sd";
+@import "slider-tablet-hd";
+@import "slider-desktop-sd";
+@import "slider-desktop-hd";

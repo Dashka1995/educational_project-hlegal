@@ -1,0 +1,83 @@
+@use "../wrapper";
+@use "../variables.scss" as vars;
+
+.publications {
+  .section-note {
+    margin-bottom: 5px;
+  }
+
+  &-cards-cont {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "publication1"
+      "publication2"
+      "publication3";
+
+    :nth-child(1) {
+      grid-area: publication1;
+    }
+
+    :nth-child(2) {
+      grid-area: publication2;
+    }
+
+    :nth-child(3) {
+    
+      grid-area: publication3;
+    }
+
+    .publications-card {
+      background-color: vars.$bgSecondaryColor;
+      border-radius: 8px;
+      overflow: hidden;
+
+      picture {
+        img {
+          @include vars.imgInCont(200px);
+        }
+      }
+
+
+      &-content-cont {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        gap: 15px;
+
+        h3 {
+          @include vars.h4-regular;
+          color: vars.$textPrimaryColor;
+        }
+
+        time {
+          @include vars.pXs;
+          position: relative;
+          color: vars.$textQuaternaryColor;
+          margin-bottom: 19px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            background-color: vars.$detailsTertiaryColor;
+            left: 0;
+            right: 0;
+            top: 29px;
+          }
+        }
+
+        p {
+          @include vars.pSmall;
+          color: vars.$textQuinaryColor;
+        }
+      }
+    }
+  }
+}
+
+@import "publications-tablet-sd";
+@import "publications-tablet-hd";
+@import "publications-desktop-sd";
+@import "publications-desktop-hd";

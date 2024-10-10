@@ -1,0 +1,92 @@
+@use "variables" as vars;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.section-note {
+  @include vars.h3-caps;
+  color: vars.$textPrimaryColor;
+  text-transform: uppercase;
+
+  &::after {
+    content: ">";
+    margin-left: 3px;
+  }
+}
+
+.section-explanation {
+  @include vars.h2-regular;
+  @include vars.redGradient;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .section-explanation {
+    @include vars.hero-regular;
+  }
+
+  .top-block {
+    .section-explanation {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.top-block {
+  @include vars.bgGradient;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    background-color: vars.$detailsPrimaryColor;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    bottom: -10px;
+    left: 20px;
+    right: 20px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    background-color: vars.$detailsSecondaryColor;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    bottom: -20px;
+    left: 40px;
+    right: 40px;
+  }
+}
+
+.bottom-block {
+  background-color: vars.$bgTertiaryColor;
+  padding-top: 30px;
+}
+
+@media screen and (min-width: 1920px) {
+  .bottom-block {
+    margin-top: 60px;
+  }
+}

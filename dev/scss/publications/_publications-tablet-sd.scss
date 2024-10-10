@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) {
+  .publications {
+    .section-note {
+      margin-bottom: 10px;
+    }
+
+    &-cards-cont {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "publication1 publication2"
+        "publication3 publication3";
+    }
+  }
+}

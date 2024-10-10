@@ -1,0 +1,12 @@
+@media screen and (min-width: 1024px) {
+  .slider {
+    &-card {
+      flex-direction: row;
+
+      img {
+        width: 400px;
+        height: 528px;
+      }
+    }
+  }
+}

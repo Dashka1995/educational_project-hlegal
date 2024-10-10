@@ -1,0 +1,8 @@
+@media screen and (min-width: 1024px) {
+  .publications {
+    &-cards-cont {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "publication1 publication2 publication3";
+    }
+  }
+}

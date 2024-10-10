@@ -1,0 +1,11 @@
+@media screen and (min-width: 1440px) {
+  .slider {
+    &-card {
+      &-img-cont {
+        img {
+          height: 344px;
+        }
+      }
+    }
+  }
+}

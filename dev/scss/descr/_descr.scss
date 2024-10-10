@@ -1,0 +1,66 @@
+@use "../wrapper";
+@use "../variables.scss" as vars;
+
+.descr {
+  display: flex;
+  flex-direction: column;
+
+  hr {
+    height: 4px;
+    width: calc(100vw - 60px);
+    background-color: #ffffff4d;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.descr-buttons {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+
+  button {
+    @include vars.hero-mobile;
+    font-family: Montserrat, sans-serif;
+    border: none;
+    background-color: transparent;
+    color: vars.$textQuaternaryColor;
+    flex-shrink: 0;
+  }
+
+  .active {
+    @include vars.redGradient;
+  }
+
+  button:first-of-type {
+    margin-left: 30px;
+  }
+
+  button:last-of-type {
+    margin-right: 30px;
+  }
+}
+
+.descr-text {
+  padding: 30px;
+
+  h4 {
+    @include vars.h2-mobile;
+    color: vars.$bgSecondaryColor;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  p {
+    @include vars.pLarge;
+    color: vars.$bgSecondaryColor;
+  }
+}
+
+@import "descr-tablet-sd";
+@import "descr-tablet-hd";
+@import "descr-desktop-sd";
+@import "descr-desktop-hd";

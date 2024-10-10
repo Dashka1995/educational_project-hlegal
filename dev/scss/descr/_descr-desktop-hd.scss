@@ -1,0 +1,12 @@
+@use "../variables.scss" as vars;
+
+@media screen and (min-width: 1920px) {
+  .descr {
+    width: 1360px;
+  }
+
+  .descr-buttons button:hover {
+    color: vars.$textSecondaryColor;
+  }
+
+  }

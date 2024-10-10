@@ -1,0 +1,87 @@
+@use "../wrapper";
+@use "../variables.scss" as vars;
+
+.clients {
+  padding-top: 30px;
+
+  a:first-of-type {
+    @include vars.h3-caps;
+    display: block;
+    text-align: center;
+    color: vars.$bgPrimaryColor;
+    text-transform: uppercase;
+  }
+
+  &-cont {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "client1"
+      "client2"
+      "client3"
+      "client4"
+      "client5"
+      "client6"
+      "client7"
+      "client8"
+      "client9"
+      "client10"
+      "client11"
+      "client12";
+
+    a {
+      display: inline-block;
+
+      img {
+        @include vars.imgInCont(120px);
+      }
+    }
+
+    a:nth-child(1) {
+      grid-area: client1;
+    }
+    a:nth-child(2) {
+      grid-area: client2;
+    }
+    a:nth-child(3) {
+      grid-area: client3;
+    }
+    a:nth-child(4) {
+      grid-area: client4;
+    }
+    a:nth-child(5) {
+      grid-area: client5;
+    }
+    a:nth-child(6) {
+      grid-area: client6;
+    }
+    a:nth-child(7) {
+      grid-area: client7;
+    }
+    a:nth-child(8) {
+      grid-area: client8;
+    }
+    a:nth-child(9) {
+      grid-area: client9;
+    }
+    a:nth-child(10) {
+      grid-area: client10;
+    }
+    a:nth-child(11) {
+      grid-area: client11;
+    }
+    a:nth-child(12) {
+      grid-area: client12;
+    }
+
+    a:nth-child(n + 7) {
+      display: none;
+    }
+  }
+}
+
+@import "clients-tablet-sd";
+@import "clients-tablet-hd";
+@import "clients-desktop-sd";
+@import "clients-desktop-hd";

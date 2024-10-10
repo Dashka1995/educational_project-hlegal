@@ -1,0 +1,83 @@
+@use "../wrapper";
+@use "../variables.scss" as vars;
+
+.services {
+  padding-bottom: 60px;
+
+  .section-note {
+    margin-bottom: 10px;
+  }
+
+  &-card-cont {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "fistcard"
+      "secondcard"
+      "thirdcard"
+      "fourthcard"
+      "fifthcard"
+      "sixthcard";
+
+    &:nth-child(1) {
+      grid-area: fistcard;
+    }
+
+    &:nth-child(2) {
+      grid-area: secondcard;
+    }
+
+    &:nth-child(3) {
+      grid-area: thirdcard;
+    }
+
+    &:nth-child(4) {
+      grid-area: fourthcard;
+    }
+
+    &:nth-child(5) {
+      grid-area: fifthcard;
+    }
+
+    &:nth-child(6) {
+      grid-area: sixthcard;
+    }
+
+    .services-card {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      p {
+        @include vars.pRegular;
+        color: vars.$textTertiaryColor;
+      }
+
+      &-icon-cont {
+        width: 92px;
+        height: 92px;
+        border-radius: 24px;
+        background-color: vars.$bgSecondaryColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        @include vars.h3-regular;
+        width: fit-content;
+        color: vars.$textPrimaryColor;
+      }
+
+      a:first-of-type {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@import "services-tablet-sd";
+@import "services-tablet-hd";
+@import "services-desktop-sd";
+@import "services-desktop-hd";

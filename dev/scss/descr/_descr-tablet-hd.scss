@@ -1,0 +1,40 @@
+@media screen and (min-width: 1024px) {
+  .descr {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 30px;
+    align-items: center;
+
+    hr {
+        min-height: 303px;
+        max-width: 4px;
+        background-color: #ffffff4d;
+        border: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+  }
+
+  .descr-buttons {
+    align-items: end;
+    flex-shrink: 0;
+    overflow-x: visible;
+    flex-direction: column;
+
+    button:first-of-type {
+      margin-left: 0px;
+    }
+
+    button:last-of-type {
+      margin-right: 0px;
+    }
+  }
+
+  .descr-text {
+    padding-left: 0px;
+    padding-right: 0px;
+
+  }
+}

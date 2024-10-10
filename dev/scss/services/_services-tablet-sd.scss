@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+  .services {
+    &-card-cont {
+      grid-gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "fistcard secondcard"
+        "thirdcard fourthcard"
+        "fifthcard sixthcard";
+    }
+  }
+}
