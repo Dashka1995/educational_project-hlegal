@@ -52,5 +52,3 @@ gulp.watch("./dev/*.html", gulp.series("html"));
 gulp.task("start", gulp.series("clean","css", "html", "copy"));
 //gulp.parallel - команды выполняются паралельно, gulp.series - команды выполняются последовательно
 
-
-// 1.06
